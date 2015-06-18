@@ -85,11 +85,11 @@ def crawl_web(url, max_depth=None, max_breadth=None):
                             else:
                                 external[index]['score'] += 1
                         else:
-                            if in_array(urljoin(web, src.path), internal) is None:
+                            if in_array(urljoin(web, src.path), internal) is None and len(internal) < max_breadth:
                                 print(urljoin(web, src.path))
                                 internal.append({'name': urljoin(web, src.path), 'visited': False})
                 else:
-                    if src.path != '/' and src.path:
+                    if src.path != '/' and src.path and len(internal) < max_breadth:
                         path = urljoin(url, src.path)
                         if in_array(path, internal) is None:
                             print(path)
@@ -107,10 +107,8 @@ def crawl_web(url, max_depth=None, max_breadth=None):
     for link in internal:
         if link['visited'] == False:
             print(u'internal: {0}/{1}, external: {2}'.format(len([i for i in internal if i['visited'] == False]), len(internal), len(external)))
-            if max_breadth > 0:
-                link['visited'] = True
-                crawl_page(link['name'])
-                max_breadth - 1
+            link['visited'] = True
+            crawl_page(link['name'])
 
     return external
 
@@ -121,6 +119,6 @@ def crawl_from_seed():
     for web in webs:
         print(web)
         nets.append(
-                {'name': web, 'visited': False, 'score': 0, 'links': [crawl_web(web,1,400)]}
+                {'name': web, 'visited': False, 'score': 0, 'links': crawl_web(web,1,150)}
         )
     return nets

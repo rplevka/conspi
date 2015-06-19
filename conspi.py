@@ -6,6 +6,7 @@ afinabul.blog.cz - Juraj Smatana's list of conspiracy-theory webs
 
 """
 
+import json
 import requests
 import string
 import sys
@@ -39,7 +40,8 @@ def get_seed_list():
     return web_list
 
 def get_domain(url):
-    link = '.'.join(string.split(url.netloc, '.')[-2:]) 
+    link = '.'.join(string.split(url.netloc, '.')[-2:])
+    link = link.replace('http://', '')
     return link.replace('www.', '')
 def fix_netloc(url):
     if url.startswith('www.'):
@@ -52,7 +54,6 @@ def crawl_web(url, max_depth=None, max_breadth=None):
     [{name: String, score: Int, visited: Bool, links: [{..}, ..]}, {..}, ..]
     """
     
-    # define man obj
     if max_depth == None:
         max_depth = 1
     if max_breadth == None:
@@ -70,7 +71,7 @@ def crawl_web(url, max_depth=None, max_breadth=None):
                 continue
 
     def crawl_page(url):
-        # print(str(type(url))+' '+url)
+        #print('[parse_page]: '+url)
         try:
             page = html.fromstring(requests.get(url).text)
             page_links = [urlparse(fix_netloc(i.attrib['href'])) for i in page.xpath('//a[@href]')]
@@ -78,21 +79,19 @@ def crawl_web(url, max_depth=None, max_breadth=None):
                 if bool(src.netloc):
                     web = get_domain(src)
                     if web not in blacklist:
-                        if web != url:
+                        if web != get_domain(urlparse(url)):
                             index = in_array(web, external)
                             if index is None:
                                 external.append({'name': web, 'score': 1, 'visited': False, 'links': []})
                             else:
                                 external[index]['score'] += 1
                         else:
-                            if in_array(urljoin(web, src.path), internal) is None and len(internal) < max_breadth:
-                                print(urljoin(web, src.path))
-                                internal.append({'name': urljoin(web, src.path), 'visited': False})
+                            if src.path and in_array(urljoin(web, src.path), internal) is None and len(internal) < max_breadth:
+                                internal.append({'name': urljoin('http://'+web, src.path), 'visited': False})
                 else:
                     if src.path != '/' and src.path and len(internal) < max_breadth:
                         path = urljoin(url, src.path)
                         if in_array(path, internal) is None:
-                            print(path)
                             internal.append({'name': path, 'visited': False})
         except ValueError:
             print(u'ValueError: for url: {}'.format(url))
@@ -103,10 +102,10 @@ def crawl_web(url, max_depth=None, max_breadth=None):
     if not url.startswith('http://'):
         url = 'http://' + url
     url = urlparse(fix_netloc(url))
-    internal.append({'name': 'http://' + get_domain(url), 'visited': False})
+    crawl_page('http://' + get_domain(url));
     for link in internal:
         if link['visited'] == False:
-            print(u'internal: {0}/{1}, external: {2}'.format(len([i for i in internal if i['visited'] == False]), len(internal), len(external)))
+            print(u'internal: {0}/{1}, external: {2} - {3}'.format(len([i for i in internal if i['visited'] == False]), len(internal), len(external), external[len(external)-1]['name']))
             link['visited'] = True
             crawl_page(link['name'])
 
@@ -117,8 +116,7 @@ def crawl_from_seed():
     webs = ['http://'+i for i in get_seed_list() if not i.startswith('http://')]
     nets = []
     for web in webs:
-        print(web)
         nets.append(
-                {'name': web, 'visited': False, 'score': 0, 'links': crawl_web(web,1,150)}
+                 {'name': web, 'visited': False, 'score': 0, 'links': crawl_web(web,1,250)}
         )
-    return nets
+    return json.dumps(nets)

@@ -3,6 +3,9 @@ A set of functions designed to crawl a list of suspicous websites. The output sh
 
 current draft of the visualized graph:
 
+Even newer:
+http://codepen.io/eidam61/pen/zGPYpO?editors=101
+
 Adam:
 http://codepen.io/rplevka/pen/JdrymL?editors=001
 

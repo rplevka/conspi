@@ -24,7 +24,7 @@ def get_seed_list():
         'aktualizovany-zoznam-webovych-stranok-ktorych-linkovanim-si-'
         'koledujete-o-moju-odbornu-starostlivost'
     )
-    source_tree = html.fromstring(source_page.text)
+    source_tree = html.fromstring(source_page.content)
 
     # parse the relevant divs, extract link src and append them to an Array
     article_elem = source_tree.xpath('//div[@class="articleText"]')[0]
@@ -79,7 +79,7 @@ def crawl_web(url, max_depth=None, max_breadth=None):
     def crawl_page(url):
         print('[parse_page]: ' + url)
         try:
-            page = html.fromstring(requests.get(url).text)
+            page = html.fromstring(requests.get(url).content)
             page_links = [urlparse(fix_netloc(i.attrib['href'])) for i in page.xpath('//a[@href]') if i.attrib['href'] != '#']
             # append links from javascript
             for i in page.xpath('//script'):
@@ -106,7 +106,7 @@ def crawl_web(url, max_depth=None, max_breadth=None):
                         if in_array(path, internal) is None:
                             internal.append({'name': path, 'visited': False})
         except ValueError:
-            print(u'ValueError: for url: {}'.format(url))
+            print(u'ValueError: for url: {0} - {1}'.format(url, sys.exc_info()))
         except:
             print(u'error while fetching the page {0}, skipping. - {1}'.format(url, sys.exc_info()))
 

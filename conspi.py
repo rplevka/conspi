@@ -7,6 +7,7 @@ afinabul.blog.cz - Juraj Smatana's list of conspiracy-theory webs
 """
 
 import json
+import re
 import requests
 import string
 import sys
@@ -62,7 +63,7 @@ def crawl_web(url, max_depth=None, max_breadth=None):
     if max_depth is None:
         max_depth = 1
     if max_breadth is None:
-        max_breadth = -1
+        max_breadth = 100
 
     internal = []
     external = []
@@ -76,10 +77,16 @@ def crawl_web(url, max_depth=None, max_breadth=None):
                 continue
 
     def crawl_page(url):
-        # print('[parse_page]: '+url)
+        print('[parse_page]: ' + url)
         try:
             page = html.fromstring(requests.get(url).text)
-            page_links = [urlparse(fix_netloc(i.attrib['href'])) for i in page.xpath('//a[@href]')]
+            page_links = [urlparse(fix_netloc(i.attrib['href'])) for i in page.xpath('//a[@href]') if i.attrib['href'] != '#']
+            # append links from javascript
+            for i in page.xpath('//script'):
+                if i.text is not None:
+                    m = re.search('window.location = "([^"]+)', i.text)
+                    if m is not None:
+                        page_links.append(urlparse(fix_netloc(m.group(1))))
             for src in page_links:
                 if bool(src.netloc):
                     web = get_domain(src)
@@ -101,7 +108,7 @@ def crawl_web(url, max_depth=None, max_breadth=None):
         except ValueError:
             print(u'ValueError: for url: {}'.format(url))
         except:
-            print(u'error while fetching the page {0}, skipping. - {1}'.format(url, sys.exc_info()[0]))
+            print(u'error while fetching the page {0}, skipping. - {1}'.format(url, sys.exc_info()))
 
     if not url.startswith('http://'):
         url = 'http://' + url
@@ -109,7 +116,7 @@ def crawl_web(url, max_depth=None, max_breadth=None):
     crawl_page('http://' + get_domain(url))
     for link in internal:
         if link['visited'] is False:
-            print(u'internal: {0}/{1}, external: {2} - {3}'.format(len([i for i in internal if i['visited'] is False]), len(internal), len(external), external[len(external) - 1]['name']))
+            # print(u'internal: {0}/{1}, external: {2} - {3}'.format(len([i for i in internal if i['visited'] is False]), len(internal), len(external), external[len(external) - 1]['name']))
             link['visited'] = True
             crawl_page(link['name'])
 

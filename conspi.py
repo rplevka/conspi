@@ -14,7 +14,15 @@ import sys
 from lxml import etree, html
 from urlparse import urlparse, urljoin
 
-blacklist = ['facebook.com', 'twitter.com', 'google.com', 'youtube.com', 'vimeo.com', 'wordpress.com', 'mojevideo.sk']
+blacklist = [
+    'facebook.com',
+    'twitter.com',
+    'google.com',
+    'youtube.com',
+    'vimeo.com',
+    'wordpress.com',
+    'mojevideo.sk'
+]
 
 
 def get_seed_list():
@@ -49,7 +57,8 @@ def get_domain(url):
 
 
 def fix_netloc(url):
-    if url.startswith('www.'):
+    url = url.replace('www.', '')
+    if not url.startswith('http://') and not url.startswith('https://'):
         return 'http://' + url
     else:
         return url
@@ -80,15 +89,17 @@ def crawl_web(url, max_depth=None, max_breadth=None):
         print('[parse_page]: ' + url)
         try:
             page = html.fromstring(requests.get(url).content)
-            page_links = [urlparse(fix_netloc(i.attrib['href'])) for i in page.xpath('//a[@href]') if i.attrib['href'] != '#']
-            # append links from javascript
+            page_links = [
+                urlparse(fix_netloc(i.attrib['href'])) for i in page.xpath('//a[@href]') if i.attrib['href'] != '#'
+            ]
+            # append links from JS code
             for i in page.xpath('//script'):
                 if i.text is not None:
                     m = re.search('window.location = "([^"]+)', i.text)
                     if m is not None:
                         page_links.append(urlparse(fix_netloc(m.group(1))))
             for src in page_links:
-                if bool(src.netloc):
+                if bool(src.netloc) and 'javascript:' not in src.netloc:
                     web = get_domain(src)
                     if web not in blacklist:
                         if web != get_domain(urlparse(url)):
@@ -98,7 +109,7 @@ def crawl_web(url, max_depth=None, max_breadth=None):
                             else:
                                 external[index]['score'] += 1
                         else:
-                            if src.path and in_array(urljoin(web, src.path), internal) is None and len(internal) < max_breadth:
+                            if src.path and in_array(urljoin('http://' + web, src.path), internal) is None and len(internal) < max_breadth:
                                 internal.append({'name': urljoin('http://' + web, src.path), 'visited': False})
                 else:
                     if src.path != '/' and src.path and len(internal) < max_breadth:
@@ -125,10 +136,14 @@ def crawl_web(url, max_depth=None, max_breadth=None):
 
 def crawl_from_seed():
     seeds = get_seed_list()
-    webs = ['http://' + i for i in get_seed_list() if not i.startswith('http://')]
+    webs = []
     nets = []
+
+    for seed in seeds:
+        webs.append(urlparse(fix_netloc(seed)).netloc)
     for web in webs:
-        nets.append(
-            {'name': web, 'visited': False, 'score': 0, 'links': crawl_web(web, 1, 250)}
-        )
+        if web not in blacklist:
+            nets.append(
+                {'name': web, 'visited': False, 'score': 0, 'links': crawl_web(web, 1, 250)}
+            )
     return json.dumps(nets)

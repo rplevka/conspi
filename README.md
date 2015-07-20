@@ -6,8 +6,8 @@ current draft of the visualized graph:
 Even newer:
 http://codepen.io/eidam61/pen/zGPYpO?editors=101
 
-Adam:
-http://codepen.io/rplevka/pen/JdrymL?editors=001
+Adam (js):
+http://codepen.io/eidam61/pen/vOaqPa
 
 
 Roman:

@@ -1,65 +1,67 @@
-social = [
-  'google.com'
-  'facebook.com'
-  'fb.com'
-  'instagram.com'
-  'pen.io'
-  'youtube.com'
-  'twitter.com'
-  'youtu.be'
-  'youtube.com'
-  'vimeo.com'
-  'wordpress.com'
-  'wikipedia.org'
-  'photobucket.com'
-  'levaperspektiva.cz'
-]
+{
+  "social": [
+    "google.com",
+    "facebook.com",
+    "fb.com",
+    "instagram.com",
+    "pen.io",
+    "youtube.com",
+    "twitter.com",
+    "youtu.be",
+    "youtube.com",
+    "vimeo.com",
+    "wordpress.com",
+    "wikipedia.org",
+    "photobucket.com",
+    "levaperspektiva.cz"
+  ],
 
-official = []
-conspi = []
-commercial = [
-  "knihy-keltner.cz"
-  "healthyandnaturallife.com"
-  "beautyhealthpage.com"
-  "healthyfoodteam.com"
-  "healthyandnaturalworld.com"
-  "http://red-pill.org/"
-  "bazenyshop.sk"
-  "vodni-tepelne-elektrarny.cz"
-  "antimalware.cz"
-  "antimalware.cz"
-  "serialzone.cz"
-  "sberbank.ru"
-  "Keramik-Unik.dk"
-  "pohrebpegas.cz"
-  "sportprodej.cz"
-  "konopny-caj.cz"
-  "konopne-seminko.eu"
-  "konopne-mazani.cz"
-  "konopny-protein.cz"
-  "konopny-olej.eu"
-  "hanf-tee.eu"
-  "hanf-samen.eu"
-  "hanfsamen-ol.eu"
-  "gopay.cz"
-  "hurghada.sk"
-  "webnode.sk"
-  "webnode.nl"
-  "webnode.tw"
-  "webnode.mx"
-  "webnode.it"
-  "webnode.vn"
-  "webnode.jp"
-  "webnode.in"
-  "webnode.kr"
-  "webnode.cl"
-  "webnode.hu"
-  "webnode.ru"
-  "webnode.fr"
-  "webnode.fi"
-  "webnode.at"
-  "webnode.gr"
-  "webnode.pt"
-  "webnode.es"
-  "webnode.be"
-]
+  "official": [],
+  "conspi": [],
+  "commercial": [
+    "knihy-keltner.cz",
+    "healthyandnaturallife.com",
+    "beautyhealthpage.com",
+    "healthyfoodteam.com",
+    "healthyandnaturalworld.com",
+    "http://red-pill.org/",
+    "bazenyshop.sk",
+    "vodni-tepelne-elektrarny.cz",
+    "antimalware.cz",
+    "antimalware.cz",
+    "serialzone.cz",
+    "sberbank.ru",
+    "Keramik-Unik.dk",
+    "pohrebpegas.cz",
+    "sportprodej.cz",
+    "konopny-caj.cz",
+    "konopne-seminko.eu",
+    "konopne-mazani.cz",
+    "konopny-protein.cz",
+    "konopny-olej.eu",
+    "hanf-tee.eu",
+    "hanf-samen.eu",
+    "hanfsamen-ol.eu",
+    "gopay.cz",
+    "hurghada.sk",
+    "webnode.sk",
+    "webnode.nl",
+    "webnode.tw",
+    "webnode.mx",
+    "webnode.it",
+    "webnode.vn",
+    "webnode.jp",
+    "webnode.in",
+    "webnode.kr",
+    "webnode.cl",
+    "webnode.hu",
+    "webnode.ru",
+    "webnode.fr",
+    "webnode.fi",
+    "webnode.at",
+    "webnode.gr",
+    "webnode.pt",
+    "webnode.es",
+    "webnode.be"
+  ]
+}

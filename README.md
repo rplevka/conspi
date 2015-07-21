@@ -7,7 +7,7 @@ Even newer:
 http://codepen.io/eidam61/pen/zGPYpO?editors=101
 
 Adam (js):
-http://codepen.io/eidam61/pen/vOaqPa
+http://codepen.io/eidam61/pen/bdxWqR
 
 
 Roman:

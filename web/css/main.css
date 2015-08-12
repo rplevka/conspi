@@ -1,0 +1,41 @@
+#wrapper{
+  width: 100%;
+  height: 100%;
+}
+#network{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#panel{
+  background-color: grey;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 300px;
+  height: 100%;
+}
+#filter-range{
+  bottom: 0px;
+  position: absolute;
+}
+.node {
+  stroke: #222;
+  stroke-width: 1px;
+}
+
+.link {
+  stroke-opacity: .8;
+  stroke: #222;
+  fill: none
+}
+
+svg {
+   background: #eef;
+}
+
+#arrow{
+  stroke: #222;
+  opacity: .8;
+}
+

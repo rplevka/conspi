@@ -1,7 +1,10 @@
-filter = 20;
+var filter = 20;
+var activeNode;
+var panel;
 
 
 $( document ).ready(function() {
+  panel = new Panel();
   controller.init();
 });
 
@@ -13,6 +16,24 @@ Controller.prototype.init = function () {
   this.prepareData();
   network.create();
 };
+
+Controller.prototype.changeActiveNode = function (node) {
+  var id = node.index
+
+  var sourceLinks = _.sortByOrder(_.pluck(_.filter(collection.links, function(link){
+    return link.source.index == id
+  }), 'source'), 'weight', 'desc')
+
+  console.log(sourceLinks.length)
+
+  var targetLinks = _.sortByOrder(_.pluck(_.filter(collection.links, function(link){
+    return link.source.index == id
+  }), 'target'), 'weight', 'desc')
+
+  panel.draw(node, sourceLinks, targetLinks)
+}
+
+
 
 Controller.prototype.prepareData = function () {
   var d, getGroup, grp, indx, j, k, l, len, len1, len2, len3, link, m, newNode, ref1, ref2, ref3, self, src, tgt;
@@ -124,7 +145,7 @@ var nodeGroups = {
 };
 
 var collection = new Collection();
-var panel = new Panel();
+
 var network = new Network();
 
 

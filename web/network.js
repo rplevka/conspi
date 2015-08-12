@@ -14,7 +14,7 @@ Network.prototype.create = function() {
   //this.div.empty();
 
   var svg 
-  svg = d3.select('#wrapper').append('svg')
+  svg = d3.select('#network').append('svg')
     .attr('width', self.width)
     .attr('height', self.height)
 
@@ -61,16 +61,22 @@ Network.prototype.create = function() {
         return d.y;
       });
     });
-  var node = svg.selectAll(".node").data(this.data.nodes).enter().append("circle")
-    .attr("class", "node").attr("r", function(d) {
-      return self['scaleRadius'](d);
-    }).style("fill", function(d) {
-      return colors[d.group];
-    }).call(force.drag).on("mouseover", function(d) {
-      return window.label.show(this, d);
-    }).on("mouseout", function() {
-      return window.label.hide();
-    });
+  var node = svg.selectAll(".node")
+    .data(this.data.nodes).enter().append("circle")
+      .attr("class", "node").attr("r", function(d) {
+        return self['scaleRadius'](d);
+      })
+      .style("fill", function(d) {
+        return colors[d.group];
+      })
+      .call(force.drag)
+      .on("mouseover", function(d) {
+        console.log (d);
+        controller.changeActiveNode(d)
+      })
+      .on("mouseout", function() {
+        return window.label.hide();
+      });
 };  
 
 

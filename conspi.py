@@ -7,11 +7,10 @@ afinabul.blog.cz - Juraj Smatana's list of conspiracy-theory webs
 """
 
 import json
-import re
 import requests
 import string
 import sys
-from lxml import etree, html
+from lxml import html
 from urlparse import urlparse, urljoin
 
 blacklist = [
@@ -32,7 +31,7 @@ def get_seed_list():
         'aktualizovany-zoznam-webovych-stranok-ktorych-linkovanim-si-'
         'koledujete-o-moju-odbornu-starostlivost'
     )
-    source_tree = html.fromstring(source_page.content)
+    source_tree = html.fromstring(source_page.text)
 
     # parse the relevant divs, extract link src and append them to an Array
     article_elem = source_tree.xpath('//div[@class="articleText"]')[0]
@@ -57,25 +56,22 @@ def get_domain(url):
 
 
 def fix_netloc(url):
-    url = url.replace('www.', '')
-    if not url.startswith('http://') and not url.startswith('https://'):
+    if url.startswith('www.'):
         return 'http://' + url
     else:
         return url
 
 
-def crawl_web(url, max_depth=None, max_breadth=None):
+def is_external(url):
+    return True
+
+
+def crawl_web(url, max_depth=1, max_breadth=250):
     """Crawls complete web and returns a ranked list of external references
     [{name: String, score: Int, visited: Bool, links: [{..}, ..]}, {..}, ..]
     """
 
-    if max_depth is None:
-        max_depth = 1
-    if max_breadth is None:
-        max_breadth = 100
-
-    internal = []
-    external = []
+    internal, external = [], []
 
     def in_array(url, array):
         for item in array:
@@ -85,65 +81,83 @@ def crawl_web(url, max_depth=None, max_breadth=None):
             except:
                 continue
 
-    def crawl_page(url):
-        print('[parse_page]: ' + url)
+    def crawl_page(page):
+        print('[parse_page]: ' + page)
         try:
-            page = html.fromstring(requests.get(url).content)
+            page_text = html.fromstring(requests.get(page).text)
             page_links = [
-                urlparse(fix_netloc(i.attrib['href'])) for i in page.xpath('//a[@href]') if i.attrib['href'] != '#'
+                urlparse(fix_netloc(i.attrib['href']))
+                for i in page_text.xpath('//a[@href]')
             ]
-            # append links from JS code
-            for i in page.xpath('//script'):
-                if i.text is not None:
-                    m = re.search('window.location = "([^"]+)', i.text)
-                    if m is not None:
-                        page_links.append(urlparse(fix_netloc(m.group(1))))
             for src in page_links:
-                if bool(src.netloc) and 'javascript:' not in src.netloc and 'mailto:' not in src.netloc:
+                if bool(src.netloc):
                     web = get_domain(src)
                     if web not in blacklist:
-                        if web != get_domain(urlparse(url)):
+                        # wrong! url in this scope might be a local page!!!
+                        if web != get_domain(url):
                             index = in_array(web, external)
                             if index is None:
-                                external.append({'name': web, 'score': 1, 'visited': False, 'links': []})
+                                external.append({
+                                    'name': web,
+                                    'score': 1,
+                                    'visited': False,
+                                    'links': [],
+                                })
                             else:
                                 external[index]['score'] += 1
                         else:
-                            if src.path and in_array(urljoin('http://' + web, src.path), internal) is None and len(internal) < max_breadth:
-                                internal.append({'name': urljoin('http://' + web, src.path), 'visited': False})
-                else:
-                    if src.path != '/' and src.path and len(internal) < max_breadth:
-                        path = urljoin(url, src.path)
-                        if in_array(path, internal) is None:
-                            internal.append({'name': path, 'visited': False})
+                            if src.path and in_array(
+                                urljoin('http://'+web, src.path), internal
+                            ) is None and len(internal) < max_breadth:
+                                internal.append({
+                                    'name': urljoin('http://'+web, src.path),
+                                    'visited': False,
+                                })
+                elif src.path != '/' and src.path and \
+                        len(internal) < max_breadth:
+                    path = urljoin(url.netloc, src.path)
+                    if in_array(path, internal) is None:
+                        internal.append({'name': path, 'visited': False})
         except ValueError:
-            print(u'ValueError: for url: {0} - {1}'.format(url, sys.exc_info()))
+            print(u'ValueError: for url: {}'.format(url))
         except:
-            print(u'error while fetching the page {0}, skipping. - {1}'.format(url, sys.exc_info()))
+            print(
+                u'error while fetching the page {0}, skipping. - {1}'
+                .format(url, sys.exc_info()[0])
+            )
 
     if not url.startswith('http://'):
-        url = 'http://' + url
-    url = urlparse(fix_netloc(url))
+        url = 'http://' + fix_netloc(url)
+    url = urlparse(url)
+    # print("crawl_page("'http://' + get_domain(url) + ")")
     crawl_page('http://' + get_domain(url))
     for link in internal:
         if link['visited'] is False:
-            # print(u'internal: {0}/{1}, external: {2} - {3}'.format(len([i for i in internal if i['visited'] is False]), len(internal), len(external), external[len(external) - 1]['name']))
+            print(
+                u'internal: {0}/{1} - {4}, external: {2} - {3}'
+                .format(
+                    len([i for i in internal if i['visited'] is False]),
+                    len(internal),
+                    len(external),
+                    external[len(external)-1]['name'],
+                    internal[len(internal)-1]['name'],
+                )
+            )
             link['visited'] = True
+            # print("crawl_page(" + link['name'] + ")")
             crawl_page(link['name'])
-
     return external
 
 
 def crawl_from_seed():
-    seeds = get_seed_list()
-    webs = []
+    webs = ['http://'+i for i in get_seed_list() if not i.startswith('http')]
     nets = []
-
-    for seed in seeds:
-        webs.append(urlparse(fix_netloc(seed)).netloc)
     for web in webs:
-        if web not in blacklist:
-            nets.append(
-                {'name': web, 'visited': False, 'score': 0, 'links': crawl_web(web, 1, 250)}
-            )
+        nets.append({
+            'name': web,
+            'visited': True,
+            'score': 0,
+            'links': crawl_web(web, 1, 250)
+        })
+
     return json.dumps(nets)

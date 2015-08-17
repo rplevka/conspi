@@ -22,7 +22,8 @@ var groups = {
 	"pravda.sk",
 	"sme.sk",
 	"tyzden.sk",
-	"hnonline.sk"
+	"hnonline.sk",
+	"nova.cz"
   ],
   "commercial": [
     "knihy-keltner.cz",

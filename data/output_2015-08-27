@@ -1,0 +1,3248 @@
+[
+    {
+        "visited": false,
+        "score": 0,
+        "name": "svetkolemnas.info",
+        "links": [
+            {
+                "visited": false,
+                "score": 2,
+                "name": "vedomi.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "vstupenkov.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "obrodanaroda.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 4,
+                "name": "knihy-keltner.cz",
+                "links": []
+            }
+        ]
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "zvedavec.org",
+        "links": [
+            {
+                "visited": false,
+                "score": 2,
+                "name": "reuters.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "vyzvavedcu.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "praguepride.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "sputniknews.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "svaz-muzu.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "estranky.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "konopijakolek.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "slobodnyvysielac.sk",
+                "links": []
+            }
+        ]
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "ac24.cz",
+        "links": [
+            {
+                "visited": false,
+                "score": 7,
+                "name": "vedomi.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 7,
+                "name": "vstupenkov.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 7,
+                "name": "obrodanaroda.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 14,
+                "name": "knihy-keltner.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 7,
+                "name": "creativelife.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 7,
+                "name": "inespravy.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 7,
+                "name": "outsidermedia.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 7,
+                "name": "antimalware.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 7,
+                "name": "mypower.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 7,
+                "name": "svobodny-vysilac.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 7,
+                "name": "keltnerpublishing.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 7,
+                "name": "almanach.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 7,
+                "name": "otvoroci.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 7,
+                "name": "antiilluminati.net",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 14,
+                "name": "creativecommons.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 7,
+                "name": "zootemplate.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 4,
+                "name": "jsocial.ru",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "seniortip.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 4,
+                "name": "ihned.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 3,
+                "name": "joomlatune.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "coinbase.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 3,
+                "name": "beginningandend.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "nature.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 3,
+                "name": "proteusdigitalhealth.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "nwoo.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "polidics.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "varovani.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "wikipedia.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "predplatne.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "floowie.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "akamaihd.net",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 4,
+                "name": "fbcdn.net",
+                "links": []
+            }
+        ]
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "stopautogenocide.sk",
+        "links": []
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "vzdor.sk",
+        "links": []
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "osud.cz",
+        "links": [
+            {
+                "visited": false,
+                "score": 118,
+                "name": "sportprodej.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 118,
+                "name": "pohrebpegas.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 236,
+                "name": "divway.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 119,
+                "name": "hledajici.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1534,
+                "name": "pojdsnami.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 118,
+                "name": "anch-books.eu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 236,
+                "name": "talkfusionconnect.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 236,
+                "name": "n3kl.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 118,
+                "name": "emsc-csem.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 118,
+                "name": "tsu.ru",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 118,
+                "name": "toplist.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 118,
+                "name": "rclick.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 117,
+                "name": "addthis.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "fellowshipoftheminds.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 17,
+                "name": "wikipedia.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "cluesforum.info",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "opobnews.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "cowsintrees.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "linkedin.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "wisc.edu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "montana.edu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "hawaii.edu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "ncsla.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "yale.edu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "ancestry.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "syr.edu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "richmond.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "prigl.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "cestyksobe.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "obrodanaroda.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "collective-evolution.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "amazon.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 8,
+                "name": "easy-immune-health.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "nutritionalmagnesium.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "dumblittleman.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "cureyourowncancer.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "co.uk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "traceminerals.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "prerovan.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "blisty.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "dub.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "webnode.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "karaoketexty.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "jessiejofficial.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "vigilantcitizen.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 3,
+                "name": "naturalnews.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "freepress.net",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "enenews.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "acs.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "japantoday.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "smartplanet.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "novinky.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 3,
+                "name": "idnes.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "blesk.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "cestastesti.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "diagnostika-karmy.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "tagesanzeiger.ch",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "blogspot.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "welt.de",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "lidovky.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "rense.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "blog.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "trimondi.de",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "ceskatelevize.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "ruvr.ru",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "rt.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "cestyprozitku.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "tantracentrum.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "automatickepismo.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "AcademySacredGeometry.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "simpleorganiclife.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "medicaldaily.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "thehealersjournal.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "fsb.ru",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "itanimulli.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 7,
+                "name": "loohan.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "google.es",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "timrifat.ru",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "com.bo",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "rationalwiki.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "davidicke.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "prozdravi.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "sibik.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "watercure.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "nafhim.org",
+                "links": []
+            }
+        ]
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "czechfreepress.cz",
+        "links": [
+            {
+                "visited": false,
+                "score": 3,
+                "name": "gtranslate.net",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "konopny-caj.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "konopne-seminko.eu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "konopne-mazani.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "konopny-protein.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "konopny-olej.eu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "hanf-tee.eu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "hanf-samen.eu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "hanfsamen-ol.eu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "zelenazeme.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "hanf-gesundheit.de",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "hanf-protein.eu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "easyredmine.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "easyproject.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "gopay.cz",
+                "links": []
+            }
+        ]
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "slobodnyvysielac.sk",
+        "links": [
+            {
+                "visited": false,
+                "score": 7,
+                "name": "apple.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 22,
+                "name": "parlamentnilisty.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 11,
+                "name": "topky.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 55,
+                "name": "weebly.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 11,
+                "name": "radia.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 11,
+                "name": "vlasteneckenoviny.cz",
+                "links": []
+            }
+        ]
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "hlavnespravy.sk",
+        "links": [
+            {
+                "visited": false,
+                "score": 120,
+                "name": "platon.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 60,
+                "name": "sitelement.sk",
+                "links": []
+            }
+        ]
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "badatel.sk",
+        "links": [
+            {
+                "visited": false,
+                "score": 142,
+                "name": "badatel.net",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "rizikaockovania.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "biznisweb.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "slobodnyvysielac.sk",
+                "links": []
+            }
+        ]
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "protiprudu.org",
+        "links": [
+            {
+                "visited": false,
+                "score": 203,
+                "name": "zvedavec.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 568,
+                "name": "czechfreepress.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 199,
+                "name": "nwoo.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 121,
+                "name": "linkedin.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 13,
+                "name": "spolocnyblok.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "dvepercenta.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 27,
+                "name": "aeronet.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 42,
+                "name": "outsidermedia.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 44,
+                "name": "blog.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 34,
+                "name": "zemavek.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 30,
+                "name": "g-vision.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 34,
+                "name": "root.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 16,
+                "name": "dsl.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 26,
+                "name": "ekolist.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 14,
+                "name": "greenpeace.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 22,
+                "name": "ecn.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 12,
+                "name": "9pramenu.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 16,
+                "name": "tomashajzler.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 23,
+                "name": "rodobrana.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 12,
+                "name": "deliandiver.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 17,
+                "name": "beo.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 18,
+                "name": "tvlux.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 16,
+                "name": "magnificat.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 14,
+                "name": "ragauian.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 12,
+                "name": "jitrnizeme.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 23,
+                "name": "cez-okno.net",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 46,
+                "name": "parlamentnilisty.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "wmmagazin.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 55,
+                "name": "blogspot.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 24,
+                "name": "badatel.net",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 16,
+                "name": "slobodavockovani.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 20,
+                "name": "gloria.tv",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "goscha.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "rodnacesta.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "putnici.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 9,
+                "name": "ecoprodukt.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "wolf.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "gnosis9.net",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "hnutiduha.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "vtaky.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "scoop.it",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 11,
+                "name": "sho.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "generace-identity.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "korene.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "wz.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "kemet.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 12,
+                "name": "dokumentarni.tv",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "vsieti.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "changenet.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "sietdobra.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 13,
+                "name": "ac24.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "disidenti.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 12,
+                "name": "e-republika.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "evropsky-rozhled.eu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 11,
+                "name": "freepub.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 9,
+                "name": "tv-liberland.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "stripkyzesveta.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 25,
+                "name": "svobodnenoviny.eu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "tribun.name",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "ibezhranic.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 21,
+                "name": "webnode.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 17,
+                "name": "literarky.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "nezavisly.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "nezakladnam.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 15,
+                "name": "pravybreh.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "epochtimes.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 17,
+                "name": "wertyzreport.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 20,
+                "name": "linuxos.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "osel.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "svobodavockovani.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "webnode.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "topzine.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "moderntokyotimes.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "n-tv.de",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "stern.de",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "dortmundecho.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "google.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "miniszterelnok.hu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "wsj.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "euronews.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 5,
+                "name": "theoccidentalobserver.net",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "spiegel.de",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "yahoo.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "google",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "sputniknews.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 17,
+                "name": "wikipedia.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 138,
+                "name": "nadhlad.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "freemasoninformation.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "jetotak.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "metapedia.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": ".",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "pluska.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "ivcrn.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "wiktionary.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "snn.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "msn.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "un.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "indexmundi.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "gov.za",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "researchgate.net",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "org.za",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "blogspot.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 5,
+                "name": "milan",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "holocaust.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "prop.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 3,
+                "name": "goo.gl",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "reddit.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "slobodnyvysielac.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 6,
+                "name": "counter-currents.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 3,
+                "name": "amren.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "thelocal.se",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 4,
+                "name": "cnn.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "worldpopulationreview.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "bbc.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "npr.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "countryeconomy.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "gatesofvienna.net",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "svenskarnasparti.se",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "friatider.se",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "humanitariansoftinder.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "com.pe",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 6,
+                "name": "pravda.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 4,
+                "name": "topky.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "cas.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "naacp.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "american3rdposition.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "sclabonia.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "dailymotion.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "youtube.co",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "karaoketexty.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 5,
+                "name": "co.uk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "traditioninaction.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "rawstory.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "bookdepository.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 6,
+                "name": "welt.de",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "dokufest.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "whitegenocideproject.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 6,
+                "name": "Zeitgeist",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "kultura-fb.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "infidelsarecool.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "skepticsannotatedbible.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "firstthings.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "chelemendik.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 3,
+                "name": "fondsk.ru",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "centrum.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 3,
+                "name": "sme.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "vestiaren.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 6,
+                "name": "pravda.ru",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "auria.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "jw.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 3,
+                "name": "blisty.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "aljazeera.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "bloomberg.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "foxnews.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "rt.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "thehindu.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "pansu.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "gov.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 10,
+                "name": "ZEBI",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "zakrestanske.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 6,
+                "name": "lifenews.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "svetkrestanstva.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "ffi.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "extraplus.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "vesti-online.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "slobodniobcania.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "ok-team.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "ihned.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "bbc.in",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 4,
+                "name": "bit.ly",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "vasevec.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "latimes.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "phillymag.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "forbes.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "alternet.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 3,
+                "name": "opednews.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "progress.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "trimbroker.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "net46.net",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "cataloniadirect.info",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "globalpost.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "lowtax.net",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "thinkprogress.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "robinhoodtax.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "investopedia.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "crooksandliars.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "slate.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "expatica.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "cyprus-property-buyers.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "businessinsider.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "greekreporter.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "ipsnews.net",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "marketwatch.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "palmknihy.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "ufosightingsdaily.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "torproject.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "sourceforge.net",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "122.8",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "anonymouse.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "nfo.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "harekrsna.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "indology.net",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "hinduwebsite.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "com.ar",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "stephen-knapp.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "reformation.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "org.ua",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "tripod.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "richardcassaro.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "mindserpent.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "polatkaya.net",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "safire.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "thelivingmoon.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "biomystic.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "viewzone.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "cyberistan.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "archaeologyonline.net",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "dwij.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "nstarikov.ru",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "lib.ru",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "wlym.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "uloz.to",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "zoznam.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "HEV5",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "zlo.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "videacesky.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "heureka.cz",
+                "links": []
+            }
+        ]
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "beo.sk",
+        "links": [
+            {
+                "visited": false,
+                "score": 1,
+                "name": "sho.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "co.uk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 4,
+                "name": "wikipedia.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 3,
+                "name": "homosexualita.eu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "springer.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "lifenews.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "aids.gov",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "usatoday.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "novinky.cz",
+                "links": []
+            }
+        ]
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "sho.sk",
+        "links": [
+            {
+                "visited": false,
+                "score": 8,
+                "name": "vlastenec.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "pravonaroda.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "naj.sk",
+                "links": []
+            }
+        ]
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "freepub.cz",
+        "links": [
+            {
+                "visited": false,
+                "score": 270,
+                "name": "disidenti.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 180,
+                "name": "creativecommons.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 90,
+                "name": "toplist.cz",
+                "links": []
+            }
+        ]
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "dolezite.sk",
+        "links": [
+            {
+                "visited": false,
+                "score": 2,
+                "name": "zenbeauty.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "satoshi.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "weebly.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "7spies.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "hlbkove-cistenie-pleti-bratislava.sk\r",
+                "links": []
+            }
+        ]
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "nazorobcana.sk",
+        "links": [
+            {
+                "visited": false,
+                "score": 1,
+                "name": "finep.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "xdarcek.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "feedburner.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "toplist.cz",
+                "links": []
+            }
+        ]
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "aeronet.cz",
+        "links": []
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "vedy.sk",
+        "links": [
+            {
+                "visited": false,
+                "score": 6,
+                "name": "tartaria.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "toplist.sk",
+                "links": []
+            }
+        ]
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "novysmer.cz",
+        "links": [
+            {
+                "visited": false,
+                "score": 3,
+                "name": "vyjimecny.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 3,
+                "name": "blisty.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 3,
+                "name": "joomlatp.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 6,
+                "name": "w3.org",
+                "links": []
+            }
+        ]
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "noveslovo.sk",
+        "links": [
+            {
+                "visited": false,
+                "score": 5,
+                "name": "totalpozicky.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "hurghada.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "mallorca.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "rhodos.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "cyprus.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "jordansko.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "syria.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 42,
+                "name": "altpress.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 21,
+                "name": "etrend.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 42,
+                "name": "stripkyzesveta.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 25,
+                "name": "parlamentnilisty.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 22,
+                "name": "pravda.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 44,
+                "name": "blisty.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "aktuality.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 21,
+                "name": "inst-asa.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 21,
+                "name": "fes.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 21,
+                "name": "kozsr.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 22,
+                "name": "euractiv.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 21,
+                "name": "proforum.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 21,
+                "name": "futurologia.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 21,
+                "name": "humanists.net",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 21,
+                "name": "denikreferendum.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 21,
+                "name": "sok.bz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 21,
+                "name": "oslovma.hu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 21,
+                "name": "literarky.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 22,
+                "name": "jetotak.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 21,
+                "name": "hejrup.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 21,
+                "name": "socsol.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 22,
+                "name": "blogspot.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 21,
+                "name": "lewica.pl",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 8,
+                "name": "stop-ttip.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "trade4people.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "ceskatelevize.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "spolok-slovenskych-spisovatelov.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "teraz.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "sme.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 3,
+                "name": "povstaniepokracuje.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "bloomberg.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "prozitrek.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "binghamton.edu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "prvnizpravy.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 5,
+                "name": "a2larm.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 6,
+                "name": "wikipedia.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 3,
+                "name": "jacobinmag.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "versobooks.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "reuters.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "co.uk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 3,
+                "name": "guengl.eu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "ttip-leak.eu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 4,
+                "name": "europa.eu",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 5,
+                "name": "theguardian.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "lidovky.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "ustr.gov",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "corporateeurope.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "unctad.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "huffingtonpost.ca",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "zastarouprahu.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "bmwi.de",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "democracynow.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "businessinfo.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "ceskapozice.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "ekonomika.cz",
+                "links": []
+            }
+        ]
+    },
+    {
+        "visited": false,
+        "score": 0,
+        "name": "lifenews.sk",
+        "links": [
+            {
+                "visited": false,
+                "score": 73,
+                "name": "drupal.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 73,
+                "name": "worthapost.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "com.br",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 52,
+                "name": "lifesitenews.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 4,
+                "name": "today.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 5,
+                "name": "centerformedicalprogress.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 6,
+                "name": "tkkbs.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 4,
+                "name": "rcmonitor.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 4,
+                "name": "radiovaticana.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "kdh.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "familiam.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "repubblica.it",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "lastampa.it",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 6,
+                "name": "sme.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "pop.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "shroud.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "kbs.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "marciaperlavita.it",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "qc.ca",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "wikipedia.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "matemblewo.pl",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "vatican.va",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "gwidon.pl",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 3,
+                "name": "googleusercontent.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "blogspot.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "blogspot.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "forumzivota.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 2,
+                "name": "news.va",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 4,
+                "name": "un.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "hlavnespravy.sk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 4,
+                "name": "c-fam.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "christnet.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "co.uk",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "rozhlas.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "dailystormer.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "lemonde.fr",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "iom.cz",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "zenit.org",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "breitbart.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "yahoo.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "thefederalist.com",
+                "links": []
+            },
+            {
+                "visited": false,
+                "score": 1,
+                "name": "ChurchMilitant.tv",
+                "links": []
+            }
+        ]
+    }
+]

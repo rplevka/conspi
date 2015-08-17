@@ -28,7 +28,7 @@ Network.prototype.create = function() {
       .attr("markerHeight", 6)
       .attr("orient", "auto")
     .append("path")
-      .attr("d", "M0,-5L10,0L0,5");
+      .attr("d", "M 0,0 m -5,-5 L 5,0 L -5,5 Z");
   
   var link = svg.selectAll(".link").data(this.data.links)
     .enter().append("path")
@@ -48,7 +48,7 @@ Network.prototype.create = function() {
     .size([self['width'], self['height']])
     .nodes(self.data['nodes'])
     .links(self.data['links'])
-    .charge(-120)
+    .charge(-300)
     .friction(0.7)
     .gravity(0.5)
     .start().on("tick", function() {
@@ -63,7 +63,8 @@ Network.prototype.create = function() {
     });
   var node = svg.selectAll(".node")
     .data(this.data.nodes).enter().append("circle")
-      .attr("class", "node").attr("r", function(d) {
+      .attr("class", "node")
+      .attr("r", function(d) {
         return self['scaleRadius'](d);
       })
       .style("fill", function(d) {
@@ -82,20 +83,17 @@ Network.prototype.create = function() {
 
 Network.prototype.scaleRadius = function(d) {
   var scale;
-  if (d.group === 0) {
-    return 10;
-  }
   scale = d3.scale.linear()
-    .domain([this.data.nodeWeightMin.weight, this.data.nodeWeightMax.weight])
+    .domain([this.data.nodeWeightMin.score, this.data.nodeWeightMax.score])
     .range([5, 30]);
-  return scale(d.weight);
+  return scale(d.score);
 };
 
 Network.prototype.scaleLineWidth = function(value) {
   var scale;
   scale = d3.scale.pow()
     .domain([this.data.linkValueMin.value, this.data.linkValueMax.value])
-    .range([1, 3]);
+    .range([1, 5]);
   return scale(value);
 };
 
@@ -111,7 +109,7 @@ Network.prototype.scaleLinkDistance = function(value) {
   var scale;
   scale = d3.scale.linear()
     .domain([this.data.linkValueMin.value, this.data.linkValueMax.value])
-    .range([20, 50]);
+    .range([60, 130]);
   return scale(value);
 };
 

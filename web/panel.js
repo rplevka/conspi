@@ -19,7 +19,7 @@ Panel.prototype.draw = function (node, sources, targets) {
     this.html += '<p>' + jsonInfo[i] + '</p>';
   }
     
-  this.html += '<h4>targetLinks</h4>';
+  this.html += '<h4>targets</h4>';
 
   this.html += '<ul>';
   _.forEach(targets, function(target){

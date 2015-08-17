@@ -4,6 +4,8 @@ var Collection = function Collection (){
 }
 Collection.prototype.setData = function (links, nodes) {
   this.links = links;
+
+
   this.nodes = nodes;
 
   this.linkValueMax = _.max(this.links, function(link) {
@@ -18,6 +20,8 @@ Collection.prototype.setData = function (links, nodes) {
   this.nodeWeightMin = _.min(this.nodes, function(node) {
     return node.score;
   });
+  console.log (this.linkValueMax)
+  console.log (this.linkValueMin)
 }
 
 Collection.prototype.init = function () {

@@ -1,4 +1,4 @@
-var filter = 100;
+var filter = 50;
 var activeNode;
 var panel;
 
@@ -31,8 +31,10 @@ Controller.prototype.changeActiveNode = function (node) {
   console.log(sourceLinks.length)
 
   var targetLinks = _.sortByOrder(_.pluck(_.filter(collection.links, function(link){
-    return link.source.index == id
-  }), 'target'), 'weight', 'desc')
+    return link.target.index == id
+  }), 'source'), 'weight', 'desc')
+
+  console.log (targetLinks);
 
   panel.draw(node, sourceLinks, targetLinks)
 }
@@ -51,17 +53,27 @@ Controller.prototype.prepareData = function () {
     nodes.push({
       'name': d.name,
       'group': nodeGroups['conspi'],
-      'score': _.sum(d.links, function(li){
-        return li.score;
-      })
+      'score': 0 
+
+      //_.sum(d.links, function(li){
+      //  return li.score;
+      //})
     });
+  }
+
+
+  for (j = 0, len = data.length; j < len; j++) {
+    d = data[j];
+    
     dLinks = d.links;
     
     for (k = 0, len1 = dLinks.length; k < len1; k++) {
       link = dLinks[k];
       
       if (link.score > filter) {
+
         indx = this.getByValue(nodes, link.name);
+
         
         if (!indx) {
           newNode = {
@@ -86,6 +98,10 @@ Controller.prototype.prepareData = function () {
       }
     }
   }
+
+  console.log(nodes)
+
+  console.log (_.filter(nodes, 'name', 'nwoo.org'))
 
   collection.setData(links, nodes);
 }
@@ -117,7 +133,6 @@ Controller.prototype.getGroup = function (url) {
     return nodeGroups['others'];
   }
 };
-
 
 var colors = [
   'rgb(240,2,127)', 

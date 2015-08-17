@@ -12,7 +12,13 @@ Panel.prototype.draw = function (node, sources, targets) {
   var that = this;
 
   this.html = '<h2>' + node.name + '</h2>';
-  
+
+  var jsonInfo = JSON.stringify(node).split(',')
+
+  for (var i in jsonInfo){
+    this.html += '<p>' + jsonInfo[i] + '</p>';
+  }
+    
   this.html += '<h4>targetLinks</h4>';
 
   this.html += '<ul>';

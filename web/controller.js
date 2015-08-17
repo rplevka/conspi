@@ -1,4 +1,4 @@
-var filter = 20;
+var filter = 100;
 var activeNode;
 var panel;
 
@@ -40,7 +40,6 @@ Controller.prototype.changeActiveNode = function (node) {
 
 
 Controller.prototype.prepareData = function () {
-  var d, getGroup, grp, indx, j, k, l, len, len1, len2, len3, link, m, newNode, ref1, ref2, ref3, self, src, tgt;
   var links = [];
   var nodes = [];
 
@@ -48,19 +47,22 @@ Controller.prototype.prepareData = function () {
 
   for (j = 0, len = data.length; j < len; j++) {
     d = data[j];
-    grp = 1;
+    
     nodes.push({
       'name': d.name,
-      'group': self.getGroup(d.name, {
-        'score': 0
+      'group': nodeGroups['conspi'],
+      'score': _.sum(d.links, function(li){
+        return li.score;
       })
     });
     dLinks = d.links;
     
     for (k = 0, len1 = dLinks.length; k < len1; k++) {
       link = dLinks[k];
+      
       if (link.score > filter) {
         indx = this.getByValue(nodes, link.name);
+        
         if (!indx) {
           newNode = {
             'name': link.name,
@@ -68,34 +70,19 @@ Controller.prototype.prepareData = function () {
             'score': Number(link.score)
           };
           nodes.push(newNode);
-          links.push({
-            'source': 0,
-            'target': 0,
-            'value': 0
-          });
+
         } else {
-          nodes[indx].score = Number(nodes[indx].score) + link.score;
+          nodes[indx].score += link.score;
         }
-      }
-    }
-  }
-
-
-  for (l = 0, len2 = data.length; l < len2; l++) {
-    d = data[l];
-    dLinks = d.links;
-    
-    for (m = 0, len3 = dLinks.length; m < len3; m++) {
-      link = dLinks[m];
-      if (link.score > filter) {
 
         src = this.getByValue(nodes, d.name);
         tgt = this.getByValue(nodes, link.name);
         links.push({
           "source": src,
           "target": tgt,
-          "value": 1 + link.score / 20
+          "value": link.score
         });
+
       }
     }
   }

@@ -13,11 +13,17 @@ var groups = {
     "wordpress.com",
     "wikipedia.org",
     "photobucket.com",
-    "levaperspektiva.cz"
+    "drupal.org"
   ],
 
   "official": [],
   "conspi": [],
+  "mainstream": [
+	"pravda.sk",
+	"sme.sk",
+	"tyzden.sk",
+	"hnonline.sk"
+  ],
   "commercial": [
     "knihy-keltner.cz",
     "healthyandnaturallife.com",
@@ -43,6 +49,7 @@ var groups = {
     "hanf-samen.eu",
     "hanfsamen-ol.eu",
     "gopay.cz",
+    "gtranslate.net",
     "hurghada.sk",
     "webnode.sk",
     "webnode.nl",

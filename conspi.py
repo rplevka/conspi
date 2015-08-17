@@ -99,7 +99,7 @@ def crawl_web(url, max_depth=None, max_breadth=None):
                     if m is not None:
                         page_links.append(urlparse(fix_netloc(m.group(1))))
             for src in page_links:
-                if bool(src.netloc) and 'javascript:' not in src.netloc:
+                if bool(src.netloc) and 'javascript:' not in src.netloc and 'mailto:' not in src.netloc:
                     web = get_domain(src)
                     if web not in blacklist:
                         if web != get_domain(urlparse(url)):

@@ -17,6 +17,10 @@ Controller.prototype.init = function () {
   network.create();
 };
 
+Controller.prototype.noActiveNode = function () {
+  panel.clear();
+}
+
 Controller.prototype.changeActiveNode = function (node) {
   var id = node.index
 
@@ -75,6 +79,7 @@ Controller.prototype.prepareData = function () {
       }
     }
   }
+
 
   for (l = 0, len2 = data.length; l < len2; l++) {
     d = data[l];

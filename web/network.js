@@ -75,7 +75,7 @@ Network.prototype.create = function() {
         controller.changeActiveNode(d)
       })
       .on("mouseout", function() {
-        return window.label.hide();
+        controller.noActiveNode()
       });
 };  
 

@@ -25,6 +25,15 @@ Panel.prototype.draw = function (node, sources, targets) {
   this.render()
 }
 
+
+Panel.prototype.clear = function () {
+  var that = this;
+
+  this.html = '<h2>no node seleced</h2>';
+  
+  this.render()
+}
+
 Panel.prototype.render = function () {
   this.div.html(this.html)
 }

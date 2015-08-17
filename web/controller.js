@@ -1,4 +1,4 @@
-var filter = 50;
+var filter = 20;
 var activeNode;
 var panel;
 
@@ -28,13 +28,10 @@ Controller.prototype.changeActiveNode = function (node) {
     return link.source.index == id
   }), 'source'), 'weight', 'desc')
 
-  console.log(sourceLinks.length)
 
-  var targetLinks = _.sortByOrder(_.pluck(_.filter(collection.links, function(link){
+  var targetLinks = _.filter(collection.links, function(link){
     return link.target.index == id
-  }), 'source'), 'weight', 'desc')
-
-  console.log (targetLinks);
+  })
 
   panel.draw(node, sourceLinks, targetLinks)
 }
@@ -99,9 +96,6 @@ Controller.prototype.prepareData = function () {
     }
   }
 
-  console.log(nodes)
-
-  console.log (_.filter(nodes, 'name', 'nwoo.org'))
 
   collection.setData(links, nodes);
 }

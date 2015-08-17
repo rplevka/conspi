@@ -20,8 +20,6 @@ Collection.prototype.setData = function (links, nodes) {
   this.nodeWeightMin = _.min(this.nodes, function(node) {
     return node.score;
   });
-  console.log (this.linkValueMax)
-  console.log (this.linkValueMin)
 }
 
 Collection.prototype.init = function () {

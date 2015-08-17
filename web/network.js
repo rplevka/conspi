@@ -9,7 +9,6 @@ Network.prototype.create = function() {
   this.width = $(this.div).width() - 200;
   this.height = $(this.div).height();
 
-  console.log (this.div)
   self = this;
   //this.div.empty();
 
@@ -72,7 +71,6 @@ Network.prototype.create = function() {
       })
       .call(force.drag)
       .on("mouseover", function(d) {
-        console.log (d);
         controller.changeActiveNode(d)
       })
       .on("mouseout", function() {

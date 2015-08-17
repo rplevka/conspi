@@ -23,7 +23,7 @@ Panel.prototype.draw = function (node, sources, targets) {
 
   this.html += '<ul>';
   _.forEach(targets, function(target){
-    that.html += '<li>' + target.name + ' - '  + target.weight +  '</li>';
+    that.html += '<li>' + target.source.name + ' - '  + target.value +  '</li>';
   })
   this.html += '</ul>';
 

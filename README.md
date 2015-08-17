@@ -4,4 +4,3 @@ A set of functions designed to crawl a list of suspicous websites. The output sh
 current draft of the visualized graph:
 
 ![draft-image](/image.PNG)
-Format: ![draft-image](url)

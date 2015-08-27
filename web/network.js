@@ -36,9 +36,9 @@ Network.prototype.create = function() {
       .style("stroke-width", function(d) {
         return self['scaleLineWidth'](d.value);
       })
-      .style("stroke", function(d) {
-        return self['scaleLineColor'](d.value);
-      });
+      .style("opacity", function(d) {
+        return self['scaleLineOpacity'](d.value);
+      })
 
   var force = d3.layout.force()
     .linkDistance(function(d) {
@@ -64,6 +64,9 @@ Network.prototype.create = function() {
     .data(this.data.nodes).enter().append("circle")
       .attr("class", "node")
       .attr("r", function(d) {
+        if (d.group == 0){
+          return 10;
+        }
         return self['scaleRadius'](d);
       })
       .style("fill", function(d) {
@@ -78,7 +81,6 @@ Network.prototype.create = function() {
       });
 };
 
-
 Network.prototype.scaleRadius = function(d) {
   var scale;
   scale = d3.scale.linear()
@@ -87,11 +89,20 @@ Network.prototype.scaleRadius = function(d) {
   return scale(d.score);
 };
 
+Network.prototype.scaleLineOpacity = function(value) {
+  var scale;
+  scale = d3.scale.log()
+    .domain([this.data.linkValueMin.value, this.data.linkValueMax.value])
+    .range([0.2, 0.8]);
+  return scale(value);
+};
+
+
 Network.prototype.scaleLineWidth = function(value) {
   var scale;
-  scale = d3.scale.pow()
+  scale = d3.scale.linear()
     .domain([this.data.linkValueMin.value, this.data.linkValueMax.value])
-    .range([1, 5]);
+    .range([1, 4]);
   return scale(value);
 };
 

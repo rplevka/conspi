@@ -1,6 +1,7 @@
 var filter = 20;
 var activeNode;
 var panel;
+var data;
 
 
 $( document ).ready(function() {
@@ -18,7 +19,7 @@ Controller.prototype.init = function () {
 };
 
 Controller.prototype.noActiveNode = function () {
-  panel.clear();
+  //panel.clear();
 }
 
 Controller.prototype.changeActiveNode = function (node) {
@@ -35,8 +36,6 @@ Controller.prototype.changeActiveNode = function (node) {
 
   panel.draw(node, sourceLinks, targetLinks)
 }
-
-
 
 Controller.prototype.prepareData = function () {
   var links = [];
@@ -129,12 +128,11 @@ Controller.prototype.getGroup = function (url) {
 };
 
 var colors = [
-  'rgb(240,2,127)', 
-  'rgb(253,192,134)', 
-  'rgb(127,201,127)',  
-  'rgb(255,255,153)',
-  'rgb(56,108,176)', 
-  'rgb(190,174,212)'
+  '#DA5F26', 
+  '#EAE1A6', 
+  '#32220B',  
+  '#AFC99D',
+  '#5BAC99'
 ];
 
 var nodeGroups = {
@@ -148,6 +146,5 @@ var nodeGroups = {
 var collection = new Collection();
 
 var network = new Network();
-
 
 var controller = new Controller();

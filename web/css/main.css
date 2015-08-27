@@ -1,3 +1,27 @@
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  background: #262626;
+}
+
+#header-title{
+  position: absolute;
+  z-index: 999;
+  left: 20px;
+  top: -5px;
+  cursor: pointer;
+}
+
+#header1{
+  color: #F2F2F2;
+  opacity: 0.1;
+}
+
+#header2{
+  color: #590202;
+  opacity: 0.5;
+}
+
 #wrapper{
   width: 100%;
   height: 100%;
@@ -7,35 +31,27 @@
   width: 100%;
   height: 100%;
 }
-#panel{
-  background-color: grey;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 300px;
-  height: 100%;
-}
 #filter-range{
   bottom: 0px;
   position: absolute;
 }
 .node {
-  stroke: #222;
-  stroke-width: 1px;
+  stroke: black;
+  stroke-width: 1.5px;
 }
 
 .link {
   stroke-opacity: 1;
-  stroke: #222;
-  fill: none
+  stroke: #F2F2F2;
+  fill: #F2F2F2
 }
 
 svg {
-   background: #eef;
+   background: #262626;
 }
 
 #arrow{
-  stroke: #222;
-  opacity: .8;
+  stroke: #F2F2F2;
+  fill: #F2F2F2
 }
 

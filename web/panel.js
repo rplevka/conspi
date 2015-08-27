@@ -11,7 +11,7 @@ Panel.prototype.init = function () {
 Panel.prototype.draw = function (node, sources, targets) {
   var that = this;
 
-  this.html = '<h2>' + node.name + '</h2>';
+  this.html = '<h4 id="node-name">' + node.name + '</h4>';
 
   var jsonInfo = JSON.stringify(node).split(',')
 
@@ -35,7 +35,7 @@ Panel.prototype.draw = function (node, sources, targets) {
 Panel.prototype.clear = function () {
   var that = this;
 
-  this.html = '<h2>no node seleced</h2>';
+  this.html = '<h4>no node seleced</h>';
   
   this.render()
 }

@@ -63,10 +63,11 @@ def fix_netloc(url):
 
 
 def is_external(url):
-    return True
+    if url.scheme is '':
+        return True
 
 
-def crawl_web(url, max_depth=1, max_breadth=250):
+def crawl_web(url, max_breadth=250):
     """Crawls complete web and returns a ranked list of external references
     [{name: String, score: Int, visited: Bool, links: [{..}, ..]}, {..}, ..]
     """
@@ -82,9 +83,9 @@ def crawl_web(url, max_depth=1, max_breadth=250):
                 continue
 
     def crawl_page(page):
-        print('[parse_page]: ' + page)
+        print(u'         [parse_page]: ' + page)
         try:
-            page_text = html.fromstring(requests.get(page).text)
+            page_text = html.fromstring(requests.get(page).content)
             page_links = [
                 urlparse(fix_netloc(i.attrib['href']))
                 for i in page_text.xpath('//a[@href]')
@@ -118,13 +119,16 @@ def crawl_web(url, max_depth=1, max_breadth=250):
                     path = urljoin(url.netloc, src.path)
                     if in_array(path, internal) is None:
                         internal.append({'name': path, 'visited': False})
-        except ValueError:
-            print(u'ValueError: for url: {}'.format(url))
+        # except ValueError:
+        #     print(u'ValueError: for url: {}'.format(url))
         except:
-            print(
-                u'error while fetching the page {0}, skipping. - {1}'
-                .format(url, sys.exc_info()[0])
-            )
+            print "Unexpected error:", sys.exc_info()[0]
+            # raise
+        # except:
+        #     print(
+        #         u'error while fetching the page {0}, skipping. - {1}'
+        #         .format(url, sys.exc_info()[0])
+        #     )
 
     if not url.startswith('http://'):
         url = 'http://' + fix_netloc(url)
@@ -145,7 +149,7 @@ def crawl_web(url, max_depth=1, max_breadth=250):
             )
             link['visited'] = True
             # print("crawl_page(" + link['name'] + ")")
-            crawl_page(link['name'])
+            crawl_page(urljoin(url.scheme + '://' + url.netloc, link['name']))
     return external
 
 
@@ -157,7 +161,7 @@ def crawl_from_seed():
             'name': web,
             'visited': True,
             'score': 0,
-            'links': crawl_web(web, 1, 250)
+            'links': crawl_web(web, 500)
         })
 
     return json.dumps(nets)

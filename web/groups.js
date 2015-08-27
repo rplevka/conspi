@@ -4,6 +4,7 @@ var groups = {
     "facebook.com",
     "fb.com",
     "instagram.com",
+    "linked.in",
     "pen.io",
     "youtube.com",
     "twitter.com",
@@ -12,20 +13,32 @@ var groups = {
     "vimeo.com",
     "wordpress.com",
     "wikipedia.org",
+    "weebly.com",
     "photobucket.com",
-    "drupal.org"
+    "drupal.org",
+    "addthis.com",
+    "disqus.com"
   ],
 
   "official": [],
   "conspi": [],
   "mainstream": [
-	"pravda.sk",
-	"sme.sk",
-	"tyzden.sk",
-	"hnonline.sk",
-	"nova.cz"
+    "aktuality.sk",
+    "centrum.cz",
+	  "pravda.sk",
+	  "sme.sk",
+  	"tyzden.sk",
+  	"hnonline.sk",
+  	"nova.cz",
+    "barrandov.tv",
+    "dsl.sk"
   ],
   "commercial": [
+    "dognet.sk",
+    "creativecommons.org",
+    "feedburner.org",
+    "ubuntuone.com",
+    "rclick.cz",
     "knihy-keltner.cz",
     "healthyandnaturallife.com",
     "beautyhealthpage.com",
@@ -38,6 +51,7 @@ var groups = {
     "antimalware.cz",
     "serialzone.cz",
     "sberbank.ru",
+    "scoop.it",
     "Keramik-Unik.dk",
     "pohrebpegas.cz",
     "sportprodej.cz",
@@ -70,6 +84,8 @@ var groups = {
     "webnode.gr",
     "webnode.pt",
     "webnode.es",
-    "webnode.be"
+    "webnode.be",
+    "xdarcek.sk",
+    "hlbkove-cistenie-pleti-bratislava.sk"
   ]
 }

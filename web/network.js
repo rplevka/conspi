@@ -1,6 +1,6 @@
 var Network = function Network (){
   this.div = '#network';
-  this.filter = 10;
+  this.filter = 100;
   this.data = collection;
 }
 
@@ -12,7 +12,7 @@ Network.prototype.create = function() {
   self = this;
   //this.div.empty();
 
-  var svg 
+  var svg
   svg = d3.select('#network').append('svg')
     .attr('width', self.width)
     .attr('height', self.height)
@@ -28,7 +28,7 @@ Network.prototype.create = function() {
       .attr("orient", "auto")
     .append("path")
       .attr("d", "M 0,0 m -5,-5 L 5,0 L -5,5 Z");
-  
+
   var link = svg.selectAll(".link").data(this.data.links)
     .enter().append("path")
       .attr("class", "link")
@@ -39,7 +39,7 @@ Network.prototype.create = function() {
       .style("stroke", function(d) {
         return self['scaleLineColor'](d.value);
       });
-  
+
   var force = d3.layout.force()
     .linkDistance(function(d) {
       return self['scaleLinkDistance'](d.value);
@@ -76,7 +76,7 @@ Network.prototype.create = function() {
       .on("mouseout", function() {
         controller.noActiveNode()
       });
-};  
+};
 
 
 Network.prototype.scaleRadius = function(d) {

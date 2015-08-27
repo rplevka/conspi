@@ -62,8 +62,10 @@ def fix_netloc(url):
         return url
 
 
-def is_external(url):
-    if url.scheme is '':
+def is_external(link, web):
+    if url.scheme is '' or url.netloc == web.netloc:
+        return False
+    else:
         return True
 
 
@@ -91,50 +93,30 @@ def crawl_web(url, max_breadth=250):
                 for i in page_text.xpath('//a[@href]')
             ]
             for src in page_links:
-                if bool(src.netloc):
-                    web = get_domain(src)
-                    if web not in blacklist:
-                        # wrong! url in this scope might be a local page!!!
-                        if web != get_domain(url):
-                            index = in_array(web, external)
-                            if index is None:
-                                external.append({
-                                    'name': web,
-                                    'score': 1,
-                                    'visited': False,
-                                    'links': [],
-                                })
-                            else:
-                                external[index]['score'] += 1
-                        else:
-                            if src.path and in_array(
-                                urljoin('http://'+web, src.path), internal
-                            ) is None and len(internal) < max_breadth:
-                                internal.append({
-                                    'name': urljoin('http://'+web, src.path),
-                                    'visited': False,
-                                })
-                elif src.path != '/' and src.path and \
-                        len(internal) < max_breadth:
-                    path = urljoin(url.netloc, src.path)
-                    if in_array(path, internal) is None:
-                        internal.append({'name': path, 'visited': False})
-        # except ValueError:
-        #     print(u'ValueError: for url: {}'.format(url))
+                if is_external(src, url) and src.netloc not in blacklist:
+                    index = in_array(src.netloc, external)
+                    if index is None:
+                        external.append({
+                            'name': src.netloc,
+                            'score': 1,
+                            'visited': False,
+                            'links': [],
+                        })
+                    else:
+                        external[index]['score'] += 1
+                else:
+                    link = urljoin(src.scheme + '://' + src.netloc, src.path)
+                    if (src.path and in_array(link, internal) is None
+                            and len(internal) < max_breadth):
+                        internal.append({
+                            'name': link,
+                            'visited': False,
+                        })
         except:
-            print "Unexpected error:", sys.exc_info()[0]
-            # raise
-        # except:
-        #     print(
-        #         u'error while fetching the page {0}, skipping. - {1}'
-        #         .format(url, sys.exc_info()[0])
-        #     )
+            print "Unexpected error:", sys.exc_info()[0], sys.exc_info()[1]
 
-    if not url.startswith('http://'):
-        url = 'http://' + fix_netloc(url)
     url = urlparse(url)
-    # print("crawl_page("'http://' + get_domain(url) + ")")
-    crawl_page('http://' + get_domain(url))
+    crawl_page(url.scheme + '://' + url.netloc)
     for link in internal:
         if link['visited'] is False:
             print(
@@ -152,16 +134,51 @@ def crawl_web(url, max_breadth=250):
             crawl_page(urljoin(url.scheme + '://' + url.netloc, link['name']))
     return external
 
+seeds = [
+    'http://www.svetkolemnas.info', 'http://www.zvedavec.org',
+    'http://www.ac24.cz', 'http://www.rodinajezaklad.sk/',
+    'http://www.stopautogenocide.sk', 'http://www.vzdor.sk',
+    'http://www.osud.cz', 'http://zemejas.cz/', 'http://czech.ruvr.ru/',
+    'http://slovak.ruvr.ru', 'http://www.zemavek.sk/', 'http://panobcan.sk/',
+    'http://www.czechfreepress.cz', 'http://vaseforum.sk/blog/',
+    'http://www.slobodnyvysielac.sk', 'http://www.hlavnespravy.sk',
+    'http://www.badatel.sk', 'http://www.protiprudu.org', 'http://www.beo.sk',
+    'http://obcianskytribunal.sk/blog/', 'http://www.sho.sk',
+    'http://www.voxvictims.com/', 'http://freeglobe.parlamentnilisty.cz/',
+    'http://www.magnificat.sk/', 'http://www.freepub.cz',
+    'http://vkpatriarhat.org.ua/cz/', 'http://www.spolocnostsbm.com/',
+    'http://svobodnenoviny.eu', 'http://www.auria.sk/blog/',
+    'http://afinabul.blog.cz/', 'http://www.dolezite.sk',
+    'http://www.inespravy.sk/', 'http://www.tvina.sk/',
+    'http://www.nadhlad.com/', 'http://www.ze-sveta.cz', 'http://nwoo.org',
+    'http://orgo-net.blogspot.sk', 'http://www.cez-okno.net',
+    'http://www.vlastnihlavou.cz/', 'http://www.neskutocne.sk/',
+    'http://www.bezpolitickekorektnosti.cz', 'http://www.eiaktivity.sk',
+    'http://www.nazorobcana.sk', 'http://www.alternews.cz',
+    'http://pravdive.eu/index.php', 'http://www.aeronet.cz',
+    'http://www.slovenskeslovo.sk/', 'http://www.svobodny-vysilac.cz',
+    'http://www.vedy.sk', 'http://leva-net.webnode.cz',
+    'http://www.novysmer.cz', 'http://www.novarepublika.cz',
+    'http://www.extraplus.sk', 'http://www.maat.sk', 'http://www.noveslovo.sk',
+    'http://www.lifenews.sk', 'http://www.isstras.eu', 'http://www.borrea.eu',
+    'http://rodobrana.wordpress.com', 'http://www.chelemendik.sk',
+    'http://protiproud.parlamentnilisty.cz',
+    'http://echo24.cz', 'http://www.kontroverznirealita.cz',
+    'http://medzicas.sk'
+]
+
 
 def crawl_from_seed():
-    webs = ['http://'+i for i in get_seed_list() if not i.startswith('http')]
+    # webs = ['http://'+i for i in get_seed_list() if not i.startswith('http')]
+    webs = seeds
     nets = []
     for web in webs:
+        web = urlparse(web)
         nets.append({
-            'name': web,
+            'name': web.netloc,
             'visited': True,
             'score': 0,
-            'links': crawl_web(web, 500)
+            'links': crawl_web(web.scheme + '://' + web.netloc, 5)
         })
 
     return json.dumps(nets)

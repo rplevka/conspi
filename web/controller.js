@@ -10,7 +10,7 @@ $( document ).ready(function() {
 });
 
 var Controller = function Controller (){
-  
+
 };
 
 Controller.prototype.init = function () {
@@ -45,11 +45,11 @@ Controller.prototype.prepareData = function () {
 
   for (j = 0, len = data.length; j < len; j++) {
     d = data[j];
-    
+
     nodes.push({
       'name': d.name,
       'group': nodeGroups['conspi'],
-      'score': 0 
+      'score': 0
 
       //_.sum(d.links, function(li){
       //  return li.score;
@@ -60,18 +60,18 @@ Controller.prototype.prepareData = function () {
 
   for (j = 0, len = data.length; j < len; j++) {
     d = data[j];
-    
+
     dLinks = d.links;
-    
+
     for (k = 0, len1 = dLinks.length; k < len1; k++) {
       link = dLinks[k];
-      
+
       if (link.score > filter) {
 
         indx = this.getByValue(nodes, link.name);
 
-        
-        if (!indx) {
+
+        if (indx == -1) {
           newNode = {
             'name': link.name,
             'group': self.getGroup(link.name),
@@ -109,6 +109,7 @@ Controller.prototype.getByValue = function(arr, value) {
     }
     i++;
   }
+  return -1
 };
 
 Controller.prototype.getGroupByNumber = function(numb) {
@@ -128,9 +129,9 @@ Controller.prototype.getGroup = function (url) {
 };
 
 var colors = [
-  '#DA5F26', 
-  '#EAE1A6', 
-  '#32220B',  
+  '#DA5F26',
+  '#EAE1A6',
+  '#32220B',
   '#AFC99D',
   '#5BAC99'
 ];

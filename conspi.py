@@ -13,6 +13,7 @@ from lxml import html
 from urlparse import urlparse, urljoin
 
 blacklist = [
+    'blogger.com',
     'creativecommons.org',
     'disqus.com',
     'drupal.org',
@@ -198,7 +199,9 @@ def crawl_from_seed():
             'name': fix_netloc(web.netloc),
             'visited': True,
             'score': 0,
-            'links': crawl_web(web.scheme + '://' + fix_netloc(web.netloc), 500)
+            'links': crawl_web(
+                web.scheme + '://' + fix_netloc(web.netloc), 500
+                )
         })
 
     return json.dumps(nets)

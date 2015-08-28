@@ -31,6 +31,11 @@ blacklist = [
     'linkedin'
 ]
 
+skip_schemes = [
+    'javascript',
+    'mailto'
+]
+
 
 def get_seed_list():
     # load the contains of the webpage as a parsable object
@@ -95,10 +100,12 @@ def crawl_web(url, max_breadth=250):
             ]
             for src in page_links:
                 netloc = fix_netloc(src.netloc)
-                if [i for i in blacklist if i in netloc] != []:
+                if ([i for i in blacklist if i in netloc] != [] or
+                        [i for i in skip_schemes if i in src.scheme] != []):
                     print('[blacklist]: skipping ' + netloc)
                     continue
                 if is_external(src, url):
+                    print(src)
                     index = in_array(netloc, external)
                     if index is None:
                         external.append({

@@ -1,8 +1,7 @@
-var filter = 20;
+var filter = 100;
 var activeNode;
 var panel;
 var data;
-
 
 $( document ).ready(function() {
   panel = new Panel();
@@ -25,14 +24,13 @@ Controller.prototype.noActiveNode = function () {
 Controller.prototype.changeActiveNode = function (node) {
   var id = node.index
 
-  var sourceLinks = _.sortByOrder(_.pluck(_.filter(collection.links, function(link){
+  var sourceLinks = _.sortByOrder(_.filter(collection.links, function(link){
     return link.source.index == id
-  }), 'source'), 'weight', 'desc')
+  }), 'value', 'asc');
 
-
-  var targetLinks = _.filter(collection.links, function(link){
+  var targetLinks = _.sortByOrder(_.filter(collection.links, function(link){
     return link.target.index == id
-  })
+  }), 'value', 'asc');
 
   panel.draw(node, sourceLinks, targetLinks)
 }
@@ -57,7 +55,6 @@ Controller.prototype.prepareData = function () {
     });
   }
 
-
   for (j = 0, len = data.length; j < len; j++) {
     d = data[j];
 
@@ -69,7 +66,6 @@ Controller.prototype.prepareData = function () {
       if (link.score > filter) {
 
         indx = this.getByValue(nodes, link.name);
-
 
         if (indx == -1) {
           newNode = {
@@ -90,12 +86,9 @@ Controller.prototype.prepareData = function () {
           "target": tgt,
           "value": link.score
         });
-
       }
     }
   }
-
-
   collection.setData(links, nodes);
 }
 
@@ -129,11 +122,11 @@ Controller.prototype.getGroup = function (url) {
 };
 
 var colors = [
-  '#DA5F26',
-  '#EAE1A6',
-  '#32220B',
-  '#AFC99D',
-  '#5BAC99'
+  '#f0027f',
+  '#fdc086',
+  '#beaed4',
+  '#386cb0',
+  '#7fc97f'
 ];
 
 var nodeGroups = {

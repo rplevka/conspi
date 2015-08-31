@@ -9,28 +9,51 @@ Panel.prototype.init = function () {
 };
 
 Panel.prototype.draw = function (node, sources, targets) {
+  var targetVals = this.getWidthOfBars_(_.pluck(targets, 'value'));
+  var sourceVals = this.getWidthOfBars_(_.pluck(sources, 'value'));
+
   var that = this;
 
-  this.html = '<h4 id="node-name">' + node.name + '</h4>';
-
-  var jsonInfo = JSON.stringify(node).split(',')
-
-  for (var i in jsonInfo){
-    this.html += '<p>' + jsonInfo[i] + '</p>';
-  }
+  this.html = '<h3 id="node-name">' + node.name + '</h3>';
     
-  this.html += '<h4>targets</h4>';
+  if (targets.length){
+    this.html += '<h5>targets</h5>';
+    this.html += '<div class="chart targets">';
+    _.forEach(targetVals, function(targetVal, index){
+      if (index < 10) {
+        that.html += '<div class="label">' + targets[index].source.name + '</div>'
+        that.html += '<div class="bar" style="width: ' + targetVal + 'px;">' + targets[index].value + '</div>'
+      }
+    })
+    this.html += '</div>'
+  }
+  
 
-  this.html += '<ul>';
-  _.forEach(targets, function(target){
-    that.html += '<li>' + target.source.name + ' - '  + target.value +  '</li>';
-  })
-  this.html += '</ul>';
+  if (sources.length){
+    this.html += '<h5>sources</h5>';
+    this.html += '<div class="chart sources">';
+    _.forEach(sourceVals, function(sourceVal, index){
+      if (index < 10) {
+        that.html += '<div class="label">' + sources[index].target.name + '</div>'
+        that.html += '<div class="bar" style="width: ' + sourceVal + 'px;">' + sources[index].value + '</div>'
+      }
+    });
+    this.html += '</div>'
+  }
 
-
-  this.render()
+  this.render();
 }
 
+Panel.prototype.getWidthOfBars_ = function (values) {
+  var per = 150 / _.max(values)
+  barWidths = [];
+
+  _.forEach(values, function(value){
+    barWidths.push(value * per);
+  })
+
+  return barWidths
+}
 
 Panel.prototype.clear = function () {
   var that = this;

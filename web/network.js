@@ -1,9 +1,7 @@
 var Network = function Network (){
   this.div = '#network';
-  this.filter = 100;
   this.data = collection;
 }
-
 
 Network.prototype.create = function() {
   this.width = $(this.div).width() - 200;
@@ -65,7 +63,7 @@ Network.prototype.create = function() {
       .attr("class", "node")
       .attr("r", function(d) {
         if (d.group == 0){
-          return 10;
+          return 5;
         }
         return self['scaleRadius'](d);
       })
@@ -85,7 +83,7 @@ Network.prototype.scaleRadius = function(d) {
   var scale;
   scale = d3.scale.linear()
     .domain([this.data.nodeWeightMin.score, this.data.nodeWeightMax.score])
-    .range([5, 30]);
+    .range([3, 15]);
   return scale(d.score);
 };
 
@@ -118,7 +116,7 @@ Network.prototype.scaleLinkDistance = function(value) {
   var scale;
   scale = d3.scale.linear()
     .domain([this.data.linkValueMin.value, this.data.linkValueMax.value])
-    .range([60, 130]);
+    .range([30, 10]);
   return scale(value);
 };
 

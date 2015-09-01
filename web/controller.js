@@ -1,4 +1,4 @@
-var filter = 100;
+var filter = 2000;
 var activeNode;
 var panel;
 var data;
@@ -13,7 +13,7 @@ var Controller = function Controller (){
 };
 
 Controller.prototype.init = function () {
-  this.prepareData();
+  this.prepareData(filter);
   network.create();
 };
 
@@ -35,61 +35,67 @@ Controller.prototype.changeActiveNode = function (node) {
   panel.draw(node, sourceLinks, targetLinks)
 }
 
-Controller.prototype.prepareData = function () {
+Controller.prototype.prepareData = function (filter) {
   var links = [];
-  var nodes = [];
+  var nodes_all = [];
 
   self = this;
-
-  for (j = 0, len = data.length; j < len; j++) {
+  for (var j in data) {
     d = data[j];
-
-    nodes.push({
-      'name': d.name,
-      'group': nodeGroups['conspi'],
-      'score': 0
-
-      //_.sum(d.links, function(li){
-      //  return li.score;
-      //})
-    });
-  }
-
-  for (j = 0, len = data.length; j < len; j++) {
-    d = data[j];
-
+    indx = this.getByValue(nodes_all, d.name)
+    if(indx == -1){
+      nodes_all.push({
+        'name': d.name,
+        'group': nodeGroups['conspi'],
+        'score': 0
+      });
+    }
+    else{
+      nodes_all[indx].score += link.score;
+      nodes_all[indx].group = nodeGroups['conspi'];
+    }
     dLinks = d.links;
 
-    for (k = 0, len1 = dLinks.length; k < len1; k++) {
+    // for (k = 0, len1 = dLinks.length; k < len1; k++) {
+    for (var k in dLinks) {
       link = dLinks[k];
+      indx = this.getByValue(nodes_all, link.name);
+      if (indx == -1) {
+        newNode = {
+          'name': link.name,
+          'group': self.getGroup(link.name),
+          'score': Number(link.score)
+        };
+        nodes_all.push(newNode);
 
-      if (link.score > filter) {
-
-        indx = this.getByValue(nodes, link.name);
-
-        if (indx == -1) {
-          newNode = {
-            'name': link.name,
-            'group': self.getGroup(link.name),
-            'score': Number(link.score)
-          };
-          nodes.push(newNode);
-
-        } else {
-          nodes[indx].score += link.score;
-        }
-
-        src = this.getByValue(nodes, d.name);
-        tgt = this.getByValue(nodes, link.name);
-        links.push({
+      } else {
+        nodes_all[indx].score += link.score;
+      }
+    }
+  }
+  // new FILTERED nodeset
+  var nodes_filterred = [];
+  var links2 = [];
+  for(var n in nodes_all){
+    if(nodes_all[n].score >= filter || nodes_all[n].group == nodeGroups['conspi']){
+      nodes_filterred.push(nodes_all[n]);
+    }
+  }
+  // create edge set
+  for(var j in data){
+    for(var k in data[j].links){
+      src = this.getByValue(nodes_filterred, data[j].name);
+      tgt = this.getByValue(nodes_filterred, data[j].links[k].name);
+      if(src != -1 && tgt != -1){
+        links2.push({
           "source": src,
           "target": tgt,
-          "value": link.score
+          "value": data[j].links[k].score
         });
       }
     }
   }
-  collection.setData(links, nodes);
+  collection.setData(links2, nodes_filterred);
 }
 
 Controller.prototype.getByValue = function(arr, value) {

@@ -276,65 +276,53 @@
 	"buffers":
 	[
 		{
-			"file": "web/controller.js",
+			"file": "web/data.js",
 			"settings":
 			{
-				"buffer_size": 2943,
+				"buffer_size": 563597,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "README.md",
+			"file": "web/groups.js",
 			"settings":
 			{
-				"buffer_size": 324,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "web/css/main.css",
-			"settings":
-			{
-				"buffer_size": 459,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "web/collection.js",
-			"settings":
-			{
-				"buffer_size": 603,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "web/network.js",
-			"settings":
-			{
-				"buffer_size": 3190,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "web/panel.js",
-			"settings":
-			{
-				"buffer_size": 798,
+				"buffer_size": 1393,
 				"line_ending": "Windows"
 			}
 		}
 	],
-	"build_system": "",
+	"build_system": "Packages/Python/Python.sublime-build",
 	"build_system_choices":
 	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
 	],
 	"build_varint": "",
 	"command_palette":
 	{
 		"height": 58.0,
-		"last_filter": "",
+		"last_filter": "python",
 		"selected_items":
 		[
+			[
+				"python",
+				"Set Syntax: Python"
+			],
 			[
 				"package",
 				"Preferences: Browse Packages"
@@ -384,7 +372,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 416.0
+		"width": 392.0
 	},
 	"console":
 	{
@@ -412,6 +400,12 @@
 	],
 	"file_history":
 	[
+		"/C/Users/GU/Desktop/git/conspi/README.md",
+		"/C/Users/GU/Desktop/git/conspi/web/panel.js",
+		"/C/Users/GU/Desktop/git/conspi/web/network.js",
+		"/C/Users/GU/Desktop/git/conspi/web/collection.js",
+		"/C/Users/GU/Desktop/git/conspi/web/css/main.css",
+		"/C/Users/GU/Desktop/git/conspi/web/controller.js",
 		"/C/Users/GU/Desktop/visq2/src/js/models/query.js",
 		"/C/Users/GU/Desktop/visq2/src/js/collections/data.js",
 		"/C/Users/GU/Desktop/visq2/todo.txt",
@@ -533,13 +527,7 @@
 		"/C/Users/Adam/Desktop/phd/tacr/data/lesy.geojson",
 		"/C/Users/Adam/Downloads/f.txt",
 		"/C/Users/Adam/AppData/Local/Temp/scp56340/www/visquery/src/css/map.css",
-		"/C/Users/Adam/AppData/Local/Temp/scp16811/www/visquery/src/js/models/map.js",
-		"/C/Users/Adam/AppData/Local/Temp/scp16042/www/visquery/index.html",
-		"/C/Users/Adam/AppData/Local/Temp/scp25988/www/visquery/src/data/lesy.geojson",
-		"/C/Users/Adam/AppData/Local/Temp/scp15023/www/visquery/src/js/controller.js",
-		"/C/Users/Adam/AppData/Local/Temp/scp16479/www/visquery/src/js/main.js",
-		"/C/Users/Adam/AppData/Local/Temp/scp34196/www/visquery/src/css/map.css",
-		"/C/Users/Adam/AppData/Local/Temp/scp30870/www/visquery/src/js/main.js"
+		"/C/Users/Adam/AppData/Local/Temp/scp16811/www/visquery/src/js/models/map.js"
 	],
 	"find":
 	{
@@ -729,26 +717,24 @@
 			[
 				{
 					"buffer": 0,
-					"file": "web/controller.js",
+					"file": "web/data.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2943,
+						"buffer_size": 563597,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								675,
-								675
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -759,159 +745,39 @@
 				},
 				{
 					"buffer": 1,
-					"file": "README.md",
-					"semi_transient": false,
+					"file": "web/groups.js",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 324,
+						"buffer_size": 1393,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								324,
-								324
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "web/css/main.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 459,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								353,
-								353
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "web/collection.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 603,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								536,
-								536
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 336.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 4,
-					"file": "web/network.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3190,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								266,
-								266
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "web/panel.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 798,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								545,
-								545
-							]
-						],
-						"settings":
-						{
-							"history_list_is_closing": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
 			]
 		}
 	],

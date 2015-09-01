@@ -9,15 +9,19 @@ Panel.prototype.init = function () {
 };
 
 Panel.prototype.draw = function (node, sources, targets) {
-  var targetVals = this.getWidthOfBars_(_.pluck(targets, 'value'));
   var sourceVals = this.getWidthOfBars_(_.pluck(sources, 'value'));
+  values = (_.pluck(targets, 'value')).concat(_.pluck(sources, 'value'))
+  barWidths = this.getWidthOfBars_(values);
+
+  var targetVals = barWidths.slice(0, targets.length);
+  var sourceVals = barWidths.slice(targets.length);
 
   var that = this;
 
   this.html = '<h3 id="node-name">' + node.name + '</h3>';
     
   if (targets.length){
-    this.html += '<h5>targets</h5>';
+    this.html += '<h5>sources</h5>';
     this.html += '<div class="chart targets">';
     _.forEach(targetVals, function(targetVal, index){
       if (index < 10) {
@@ -30,7 +34,7 @@ Panel.prototype.draw = function (node, sources, targets) {
   
 
   if (sources.length){
-    this.html += '<h5>sources</h5>';
+    this.html += '<h5>targets</h5>';
     this.html += '<div class="chart sources">';
     _.forEach(sourceVals, function(sourceVal, index){
       if (index < 10) {

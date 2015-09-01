@@ -70,7 +70,7 @@ def fix_netloc(netloc):
 
 def is_external(link, web):
     # print('netlocs: ' + link + ', ' + web.netloc)
-    if link.scheme is '' or link.netloc == web.netloc:
+    if link.scheme is '' or fix_netloc(link.netloc) == web.netloc:
         return False
     else:
         return True

@@ -35,6 +35,70 @@ Controller.prototype.changeActiveNode = function (node) {
   panel.draw(node, sourceLinks, targetLinks)
 }
 
+Controller.prototype.prepareData = function (filter) {
+  var links = [];
+  var nodes_all = [];
+
+  self = this;
+  for (var j in data) {
+    d = data[j];
+    indx = this.getByValue(nodes_all, d.name)
+    if(indx == -1){
+      nodes_all.push({
+        'name': d.name,
+        'group': nodeGroups['conspi'],
+        'score': 0
+      });
+    }
+    else{
+      nodes_all[indx].score += link.score;
+      nodes_all[indx].group = nodeGroups['conspi'];
+    }
+    dLinks = d.links;
+
+    // for (k = 0, len1 = dLinks.length; k < len1; k++) {
+    for (var k in dLinks) {
+      link = dLinks[k];
+      indx = this.getByValue(nodes_all, link.name);
+      if (indx == -1) {
+        newNode = {
+          'name': link.name,
+          'group': self.getGroup(link.name),
+          'score': Number(link.score)
+        };
+        nodes_all.push(newNode);
+
+      } else {
+        nodes_all[indx].score += link.score;
+      }
+    }
+  }
+  // new FILTERED nodeset
+  var nodes_filterred = [];
+  var links2 = [];
+  for(var n in nodes_all){
+    if(nodes_all[n].score >= filter || nodes_all[n].group == nodeGroups['conspi']){
+      nodes_filterred.push(nodes_all[n]);
+    }
+  }
+  // create edge set
+  for(var j in data){
+    for(var k in data[j].links){
+      src = this.getByValue(nodes2, data[j].name);
+      tgt = this.getByValue(nodes2, data[j].links[k].name);
+      if(src != -1 && tgt != -1){
+        links2.push({
+          "source": src,
+          "target": tgt,
+          "value": data[j].links[k].score
+        });
+      }
+    }
+  }
+  collection.setData(links2, nodes_all);
+}
+
+
 Controller.prototype.prepareData = function () {
   var links = [];
   var nodes = [];

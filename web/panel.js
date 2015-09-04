@@ -5,7 +5,7 @@ var Panel = function Panel (){
 
 
 Panel.prototype.init = function () {
-  
+
 };
 
 Panel.prototype.draw = function (node, sources, targets) {
@@ -19,7 +19,7 @@ Panel.prototype.draw = function (node, sources, targets) {
   var that = this;
 
   this.html = '<h3 id="node-name">' + node.name + '</h3>';
-    
+
   if (targets.length){
     this.html += '<h5>sources</h5>';
     this.html += '<div class="chart targets">';
@@ -31,7 +31,7 @@ Panel.prototype.draw = function (node, sources, targets) {
     })
     this.html += '</div>'
   }
-  
+
 
   if (sources.length){
     this.html += '<h5>targets</h5>';
@@ -63,7 +63,7 @@ Panel.prototype.clear = function () {
   var that = this;
 
   this.html = '<h4>no node seleced</h>';
-  
+
   this.render()
 }
 

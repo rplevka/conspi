@@ -40,6 +40,11 @@ body {
   stroke-width: 1.5px;
 }
 
+.selected {
+  stroke: #200;
+  stroke-width: 4px;
+}
+
 .link {
   stroke-opacity: 1;
   stroke: #F2F2F2;
@@ -54,4 +59,3 @@ svg {
   stroke: #F2F2F2;
   fill: #F2F2F2
 }
-

@@ -19,19 +19,19 @@ Controller.prototype.init = function () {
 
 Controller.prototype.noActiveNode = function () {
   //panel.clear();
+  d3.selectAll(".selected")
+    .classed('selected', false);
 }
 
 Controller.prototype.changeActiveNode = function (node) {
   var id = node.index
-
   var sourceLinks = _.sortByOrder(_.filter(collection.links, function(link){
     return link.source.index == id
-  }), 'value', 'asc');
+  }), 'value', 'desc');
 
   var targetLinks = _.sortByOrder(_.filter(collection.links, function(link){
     return link.target.index == id
-  }), 'value', 'asc');
-
+  }), 'value', 'desc');
   panel.draw(node, sourceLinks, targetLinks)
 }
 

@@ -113,10 +113,14 @@ def crawl_web(url, max_breadth=250):
                             'name': netloc,
                             'score': 1,
                             'visited': False,
+                            'paths': [],
                             'links': [],
                         })
                     else:
-                        external[index]['score'] += 1
+                        if src.path not in external[index]['paths']:
+                            external[index]['score'] += 1
+                            external[index]['paths'].append(src.path)
+
                 else:
                     link = urljoin(
                         src.scheme + '://' + netloc,
@@ -153,6 +157,10 @@ def crawl_web(url, max_breadth=250):
                     link['name']
                 )
             )
+
+    for i in external:
+        #print(i['paths'])
+        del i['paths']
     return external
 
 

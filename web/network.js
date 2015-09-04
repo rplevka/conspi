@@ -11,9 +11,15 @@ Network.prototype.create = function() {
   //this.div.empty();
 
   var svg
+  var active_selection = false;
+  var selected_node;
   svg = d3.select('#network').append('svg')
     .attr('width', self.width)
     .attr('height', self.height)
+    .on('click', function(){
+      selected_node = '';
+      controller.noActiveNode();
+    })
 
   svg.append("defs")
     .append('marker')
@@ -76,10 +82,20 @@ Network.prototype.create = function() {
       })
       .call(force.drag)
       .on("mouseover", function(d) {
-        controller.changeActiveNode(d)
+          controller.changeActiveNode(d)
+      })
+      .on("click", function(d) {
+          selected_node = d;
+          controller.noActiveNode();
+          controller.changeActiveNode(d);
+          d3.event.stopPropagation();
+          d3.select(this)
+          .classed("selected", true);
       })
       .on("mouseout", function() {
-        controller.noActiveNode()
+        if(selected_node){
+          controller.changeActiveNode(selected_node)
+        }
       });
 };
 

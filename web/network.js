@@ -39,9 +39,11 @@ Network.prototype.create = function() {
       })
 
   var force = d3.layout.force()
-    .linkDistance(function(d) {
-      return self['scaleLinkDistance'](d.value);
-    })
+    .linkDistance(
+      function(d) {
+        return self['scaleLinkDistance'](d.value);
+      }
+    )
     .size([self['width'], self['height']])
     .nodes(self.data['nodes'])
     .links(self.data['links'])
@@ -61,6 +63,8 @@ Network.prototype.create = function() {
   var node = svg.selectAll(".node")
     .data(this.data.nodes).enter().append("circle")
       .attr("class", "node")
+      .attr("cx", self.width/2 + 9999)
+      .attr("cy", self.height/2)
       .attr("r", function(d) {
         if (d.group == 0){
           return 5;
@@ -117,7 +121,7 @@ Network.prototype.scaleLinkDistance = function(value) {
   scale = d3.scale.linear()
     .domain([this.data.linkValueMin.value, this.data.linkValueMax.value])
     .range([30, 10]);
-  return scale(value);
+  return scale(value)*10;
 };
 
 Network.prototype.linkArc = function(d) {

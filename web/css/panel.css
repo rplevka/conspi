@@ -8,6 +8,7 @@
   height: 98%;
   opacity: 0.95;
   font-size: 13px;
+  overflow-y: scroll;
 }
 
 #panel h5 {

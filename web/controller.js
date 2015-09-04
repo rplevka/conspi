@@ -1,4 +1,4 @@
-var filter = 500;
+var filter = 100;
 var activeNode;
 var panel;
 var data;

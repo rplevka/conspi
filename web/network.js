@@ -47,9 +47,9 @@ Network.prototype.create = function() {
     .size([self['width'], self['height']])
     .nodes(self.data['nodes'])
     .links(self.data['links'])
-    .charge(-300)
-    .friction(0.7)
-    .gravity(0.5)
+    .charge(-400)
+    .friction(0.81)
+    .gravity(1.5)
     .start().on("tick", function() {
       link.attr("d", function(d) {
         return self['linkArc'](d);
@@ -67,9 +67,9 @@ Network.prototype.create = function() {
       .attr("cy", self.height/2)
       .attr("r", function(d) {
         if (d.group == 0){
-          return 5;
+          return 10 ;
         }
-        return self['scaleRadius'](d);
+        return self['scaleRadius'](d)*2;
       })
       .style("fill", function(d) {
         return colors[d.group];
@@ -121,7 +121,7 @@ Network.prototype.scaleLinkDistance = function(value) {
   scale = d3.scale.linear()
     .domain([this.data.linkValueMin.value, this.data.linkValueMax.value])
     .range([30, 10]);
-  return scale(value)*10;
+  return scale(value)*20;
 };
 
 Network.prototype.linkArc = function(d) {

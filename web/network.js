@@ -11,7 +11,6 @@ Network.prototype.create = function() {
   //this.div.empty();
 
   var svg
-  var active_selection = false;
   var selected_node;
   svg = d3.select('#network').append('svg')
     .attr('width', self.width)
@@ -95,6 +94,9 @@ Network.prototype.create = function() {
       .on("mouseout", function() {
         if(selected_node){
           controller.changeActiveNode(selected_node)
+        }
+        else{
+          controller.noActiveNode();
         }
       });
 };

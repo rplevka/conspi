@@ -45,6 +45,10 @@ body {
   stroke-width: 4px;
 }
 
+.dimmed {
+  stroke-opacity: 0.05 !important;
+}
+
 .link {
   stroke-opacity: 1;
   stroke: #F2F2F2;

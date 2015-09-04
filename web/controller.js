@@ -1,4 +1,4 @@
-var filter = 100;
+var filter = 400;
 var activeNode;
 var panel;
 var data;
@@ -21,6 +21,8 @@ Controller.prototype.noActiveNode = function () {
   //panel.clear();
   d3.selectAll(".selected")
     .classed('selected', false);
+  d3.selectAll(".dimmed")
+    .classed('dimmed', false);
 }
 
 Controller.prototype.changeActiveNode = function (node) {
@@ -32,6 +34,18 @@ Controller.prototype.changeActiveNode = function (node) {
   var targetLinks = _.sortByOrder(_.filter(collection.links, function(link){
     return link.target.index == id
   }), 'value', 'desc');
+
+  d3.selectAll('.link')
+    .classed('dimmed', function(d){
+      if(d.source.index == node.index || d.target.index == node.index ){
+        return false;
+      }
+      else{
+        return true;
+      }
+    });
+
+
   panel.draw(node, sourceLinks, targetLinks)
 }
 
